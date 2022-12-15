@@ -2,8 +2,9 @@
 #include "SLIB.h"
 #include <string>
 #include <vector>
+#include <map>
 
-using std::cout, std::endl, std::string, std::vector;
+using std::cout, std::endl, std::string, std::vector, std::map;
 
 int main()
 {
@@ -32,17 +33,20 @@ int main()
 //	{
 //		cout<<i<<endl;
 //	}
-
-	vector<SLIB> vectors;
-	for(int i; i<10; i++)
-	{
-		vectors.push_back(SLIB(i,i));
-	}
-	vectors.pop_back();
-	for(auto v: vectors)
-	{
-		printf("[%d, %d]\n", v.getX(), v.getY());	
-	}
+//
+//	vector<SLIB> vectors;
+//	for(int i; i<10; i++)
+//	{
+//		vectors.push_back(SLIB(i,i));
+//	}
+//	vectors.pop_back();
+//	for(auto v: vectors)
+//	{
+//		printf("[%d, %d]\n", v.getX(), v.getY());	
+//	}
+	map<string, SLIB> myMap = {{"1",SLIB(1,1)}};
+	auto element = myMap["1"];
+	cout<<element.getX()<<endl;
 
 
 }
